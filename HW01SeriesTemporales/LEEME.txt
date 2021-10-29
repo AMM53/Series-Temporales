@@ -1,0 +1,9 @@
+Esta carpeta contiene los siguientes apartados:
+
+code: contiene el Script de python en formato .ipynb usado durante el trabajo.
+data: contiene el/los datasets utilizados para este trabajo.
+img: contiene las imagenes importadas/exportadas durante este trabajo.
+informes: contiene los informes elaborados y los elementos necesarios para su visualización.
+
+Un saludo,
+Andrés Mahía

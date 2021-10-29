@@ -1,0 +1,766 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:36.0pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:36.0pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=ES link="#0563C1" vlink="#954F72" style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:20.0pt;line-height:107%;font-family:"Times New Roman",serif'>Series
+Temporales</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:20.0pt;line-height:107%;font-family:"Times New Roman",serif'>HW
+01: Predicción Ingresos Apple (AAPL)</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:20.0pt;line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:18.0pt;line-height:107%;font-family:"Times New Roman",serif'>Andrés
+Mahía Morado</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:18.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         Este trabajo nos
+presenta los siguientes objetivos específicos:</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:53.4pt;text-align:justify;
+text-indent:-18.0pt'><span style='font-size:14.0pt;line-height:107%;font-family:
+Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>Seleccionar
+los modelos ARIMA y ETS que mejor predicen las ventas de Apple, habiendo dejado
+fuera de la estimación los últimos 8 trimestres.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:53.4pt;text-align:justify;
+text-indent:-18.0pt'><span style='font-size:14.0pt;line-height:107%;font-family:
+Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>Una
+vez seleccionado el modelo, se estimará el modelo con todos los datos y se
+harán las predicciones del resto del año 2021 y del 2002 (6 trimestres)</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:53.4pt;text-align:justify;
+text-indent:-18.0pt'><span style='font-size:14.0pt;line-height:107%;font-family:
+Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>Se
+realizará una comparación de las predicciones de los modelos.</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:53.4pt;text-align:justify'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>Preguntas:</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'><a
+href="#IngresosEstacionarios">¿Los ingresos de Apple son estacionarios? ¿En
+media? ¿En varianza?</a></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'><a
+href="#TendenciaEstacionalidad">¿Cuál es su tendencia? ¿y su componente
+estacional?</a></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'><a
+href="#VentasAnuales">¿Cuáles son las ventas anuales de Apple?</a></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'><a
+href="#VentasAnuales">¿Cuáles son los crecimientos anuales de los ingresos?</a></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'><a
+href="#ModeloPrediceMejor">¿Qué modelo predice mejor?</a></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'><a
+href="#EfectoCOVID">¿Existe efecto COVID? Cuantificar.</a></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'><a
+href="#VentasAcumuladas">¿Cuáles son las ventas acumuladas para el año 2021? ¿Y
+para el 2022?</a></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'><a
+href="#Barclays">¿Son creíbles las predicciones del Barclays?</a></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>Las
+unidades descritas en este documento son siempre en miles de millones de
+dólares.</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>Este
+documento detallará los pasos que se han llevado a cabo con el objetivo de realizar
+dicho análisis y responderá a las preguntas <i>(Sección 3: Preguntas a
+Resolver) </i>cuya respuesta obtenemos del mismo.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>En
+primer lugar, hemos realizado una lectura de los datos y tras una limpieza
+inicial observamos que su aspecto es el siguiente (figura 1):</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify'><img border=0
+width=210 height=205 id="Imagen 1"
+src="Informe_HW01_SeriesTemporales_archivos/image001.png"
+alt="Tabla&#10;&#10;Descripción generada automáticamente"></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>Para
+limpiar la estructura de los datos, nos hemos deshecho de la columna <i>trimestre
+</i>ya que no va a ser necesaria.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>Hemos
+re-formateado la fecha y la hemos convertido en el índice de la tabla.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>Posteriormente,
+hemos hecho un resample trimestral de los datos ya que es el horizonte temporal
+con el que vamos a trabajar, obteniendo una tabla como esta (figura 2):</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><img border=0
+width=150 height=207 id="Imagen 2"
+src="Informe_HW01_SeriesTemporales_archivos/image002.png"
+alt="Texto&#10;&#10;Descripción generada automáticamente"></p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>Una
+vez hecho el depurado inicial de los datos, pasamos a representar la evolución
+de los ingresos de Apple durante este periodo.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>Lo
+hacemos mediante la serie original y también el logaritmo de esta.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt'><a
+name=VentasAnuales><span style='font-size:14.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>Representación numérica anualizada como referencia: a
+la izquierda, los ingresos totales en dicho año. A la derecha, el porcentaje de
+variación interanual.</span></a></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>Dichas
+tablas se encuentran contenidas en las variables <i>ventas_anuales</i> y <i>ventas_anuales_variacion</i>
+respectivamente, y se pueden consultar en el script adjunto.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.4pt'><img
+border=0 width=131 height=212 id="Imagen 22"
+src="Informe_HW01_SeriesTemporales_archivos/image003.png"
+alt="Texto&#10;&#10;Descripción generada automáticamente"><img border=0
+width=141 height=193 id="Imagen 23"
+src="Informe_HW01_SeriesTemporales_archivos/image004.png"
+alt="Texto&#10;&#10;Descripción generada automáticamente"> </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>Representación
+gráfica:</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;line-height:107%'><img border=0 width=1288 height=352
+id="Imagen 3" src="Informe_HW01_SeriesTemporales_archivos/image005.png"
+alt="Imagen que contiene Forma&#10;&#10;Descripción generada automáticamente"></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;line-height:107%'><img border=0 width=1253 height=352
+id="Imagen 4" src="Informe_HW01_SeriesTemporales_archivos/image006.png"
+alt="Gráfico, Gráfico de dispersión&#10;&#10;Descripción generada automáticamente"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:35.25pt'><a name=IngresosEstacionarios><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>La
+representación gráfica de la serie temporal nos permite observar que los
+ingresos de Apple no son estacionarios en media y tampoco lo son en varianza. A
+lo largo del periodo de análisis existe un crecimiento notable en la media y
+también en las fluctuaciones de esta.</span></a></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         Representamos
+también la autocorrelación de la serie temporal logarítmica, donde podemos ver
+que existen múltiples valores cuya autocorrelación y, en menor medida, correlación
+parcial significativas.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;line-height:107%'><img border=0 width=780 height=522
+id="Imagen 5" src="Informe_HW01_SeriesTemporales_archivos/image007.png"
+alt="Gráfico&#10;&#10;Descripción generada automáticamente"></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         Repetimos el
+proceso para 1 retardo y 4 retardos (lags), ya que nuestra serie está dividida
+en trimestres y resulta necesario analizarla teniendo en cuenta una posible
+estacionalidad y por ende,</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         relación interanual
+entre dichos trimestres.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;line-height:107%'><img border=0 width=824 height=552
+id="Imagen 6" src="Informe_HW01_SeriesTemporales_archivos/image008.png"
+alt="Interfaz de usuario gráfica, Aplicación&#10;&#10;Descripción generada automáticamente"></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         También,
+analizamos la estacionalidad de la serie temporal por trimestres, ya que los
+gráficos hasta ahora mostrados dejan ver a simple vista que existe cierta
+fluctuación interanual:</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;line-height:107%'><img border=0 width=899 height=353
+id="Imagen 7" src="Informe_HW01_SeriesTemporales_archivos/image009.png"
+alt="Gráfico, Gráfico de líneas&#10;&#10;Descripción generada automáticamente"></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         <a
+name=TendenciaEstacionalidad>Podemos observar que la media de los ingresos
+trimestrales es notablemente superior para el cuarto trimestre de cada año (Q4),
+mientras que es relativamente similar en los otros tres.</a></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         Los ingresos tienen
+una estacionalidad relativamente pronunciada y una tendencia positiva en todos
+y cada uno de los trimestres, lo cual indica un crecimiento continuo sin apenas
+retrocesos.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         Entre otras
+muchas razones que pueden dar una explicación a esto, podríamos mencionar que Apple
+realiza sus presentaciones y lanzamientos de productos en el último trimestre
+de cada año,</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         en coincidencia
+con la vuelta a las clases y el periodo navideño cuando el consumo de productos
+tecnológicos es mayor.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         </span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:20.0pt;line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><a name="_Hlk86688496"><b><span
+style='font-size:24.0pt;line-height:107%;font-family:"Times New Roman",serif'>ESTIMACIÓN
+DEL MODELO AUTO-ARIMA</span></b></a></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:24.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:24.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>      </span><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>Siguiendo
+las directrices que hemos recibido, utilizaremos el paquete <i>sktime</i> de
+Python para la generación de un modelo AutoARIMA en el que los datos de
+entrenamiento serán la serie temporal de los ingresos</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         y los datos de
+test o comprobación serán los últimos 8 periodos (trimestres) de la misma. De
+esta manera, el dataset queda dispuesto de la siguiente manera. Usamos la
+escala logarítmica para una visualización más agradable:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;line-height:107%'><img border=0 width=1288 height=331
+id="Imagen 8" src="Informe_HW01_SeriesTemporales_archivos/image010.png"
+alt="Forma&#10;&#10;Descripción generada automáticamente"></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>Definimos
+el modelo AutoARIMA con un horizonte de predicción de 8 periodos a partir del último
+periodo de entrenamiento <i>“Train”</i>, y arroja los siguientes resultados en
+comparación con el <i>test set</i>:</span><span style='font-size:14.0pt;
+line-height:107%'> </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt'><span
+style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;line-height:107%'><img border=0 width=1288 height=331
+id="Imagen 9" src="Informe_HW01_SeriesTemporales_archivos/image011.png"
+alt="Gráfico, Gráfico de líneas&#10;&#10;Descripción generada automáticamente"></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         El modelo ha tenido
+un error medio absoluto de las predicciones (MAPE) de un 15.975%, mientras que
+el error medio de los cuadrados (MSE) ha sido de 16226.20.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         Es también
+observable cierto efecto en torno a la variable categórica COVID, que hemos cuantificado
+en 30875. Esto significa que los resultados reales de Apple han superado a las
+expectativas de nuestro modelo, por lo que podemos asumir     que la pandemia
+ha afectado positivamente a los ingresos de la compañía.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         </span><b><span
+style='font-size:18.0pt;line-height:107%;font-family:"Times New Roman",serif'>Predicción:</span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         Posteriormente, aplicamos
+dicho modelo para realizar la predicción de 6 periodos adicionales a los que
+nos brinda la serie temporal. Esto es, desde Q3 de 2021 hasta Q4 de 2022.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         Los resultados
+predichos por el modelo para dichos trimestres son los siguientes. Hemos de
+tener en cuenta que estos datos son en concepto de año natural y que, a la hora
+de realizar los informes de ingresos,</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>Apple
+utiliza Q4 como primer trimestre de su año fiscal:</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><img border=0
+width=202 height=108 id="Imagen 10"
+src="Informe_HW01_SeriesTemporales_archivos/image012.png"
+alt="Texto&#10;&#10;Descripción generada automáticamente"></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;line-height:107%'><img border=0 width=1288 height=331
+id="Imagen 11" src="Informe_HW01_SeriesTemporales_archivos/image013.png"
+alt="Gráfico, Gráfico de líneas&#10;&#10;Descripción generada automáticamente"></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         Mediante la
+predicción hemos podido obtener los valores de ingresos estimados para los años
+fiscales 2021 y 2022 por este modelo, que son los siguientes:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         </span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><img border=0
+width=200 height=51 id="Imagen 13"
+src="Informe_HW01_SeriesTemporales_archivos/image014.jpg"></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:24.0pt;line-height:107%;font-family:"Times New Roman",serif'>ESTIMACIÓN
+DEL MODELO ETS</span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         De manera análoga
+al modelo ARIMA, utilizamos también un modelo ETS para predecir la serie temporal.
+Tras entrenar el modelo, muestra las siguientes predicciones para el <i>test
+set:</i></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><img border=0
+width=190 height=146 id="Imagen 14"
+src="Informe_HW01_SeriesTemporales_archivos/image015.png"
+alt="Una captura de pantalla de un celular con texto&#10;&#10;Descripción generada automáticamente con confianza media"></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         Que gráficamente
+y en comparación con los resultados reales podemos observar de la siguiente
+manera:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;line-height:107%'><img border=0 width=1289 height=335
+id="Imagen 16" src="Informe_HW01_SeriesTemporales_archivos/image016.png"
+alt="Gráfico, Gráfico de líneas&#10;&#10;Descripción generada automáticamente"></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         El modelo arroja
+un error medio porcentual (MAPE) de 18.70% y un error medio de los cuadrados
+(MSE) de 17825.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         </span><b><span
+style='font-size:18.0pt;line-height:107%;font-family:"Times New Roman",serif'>Predicción:</span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:18.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>        </span></b><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>Al
+llevar a cabo la predicción de los 6 trimestres posteriores a la serie temporal,
+obtenemos los siguientes valores y representación:</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><img border=0
+width=190 height=105 id="Imagen 17"
+src="Informe_HW01_SeriesTemporales_archivos/image017.png"
+alt="Texto&#10;&#10;Descripción generada automáticamente"></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;line-height:107%'><img border=0 width=1289 height=339
+id="Imagen 18" src="Informe_HW01_SeriesTemporales_archivos/image018.png"
+alt="Gráfico, Gráfico de líneas&#10;&#10;Descripción generada automáticamente"></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         Mediante la
+predicción hemos podido obtener los valores de ingresos estimados para los años
+fiscales 2021 y 2022 por este modelo, que son los siguientes:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><img border=0
+width=222 height=60 id="Imagen 20"
+src="Informe_HW01_SeriesTemporales_archivos/image019.jpg"></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         El efecto COVID
+observado en el modelo ETS ha sido de 37396.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>         </span><b><span
+style='font-size:18.0pt;line-height:107%;font-family:"Times New Roman",serif'>Comparación:</span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:18.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>        </span></b><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>Por
+último, podemos observar la diferencia entre las predicciones mediante los
+modelos ARIMA y ETS gráficamente.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;line-height:107%'><img border=0 width=1289 height=340
+id="Imagen 21" src="Informe_HW01_SeriesTemporales_archivos/image020.png"
+alt="Gráfico, Gráfico de líneas&#10;&#10;Descripción generada automáticamente"></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:71.25pt;text-align:justify;
+text-indent:-18.0pt'><a name=EfectoCOVID><span style='font-size:16.0pt;
+line-height:107%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span style='font-size:16.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>Efecto COVID:</span></b></a></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:106.2pt;text-align:justify'><span
+style='font-size:16.0pt;line-height:107%;font-family:"Times New Roman",serif'>El
+modelo ETS ha determinado un efecto COVID de 37396 mientras que la cifra que ha
+dado el modelo ARIMA ha sido de </span><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>30875. Ambos coinciden en
+que el COVID ha beneficiado los ingresos de la compañía, elevándolos por encima
+de lo que fuese de esperar.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:16.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:71.25pt;text-align:justify;
+text-indent:-18.0pt'><a name=ModeloPrediceMejor><span style='font-size:16.0pt;
+line-height:107%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span style='font-size:16.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>Métricas de error:</span></b></a></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:142.2pt;text-align:justify;
+text-indent:-18.0pt'><span style='font-size:14.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span style='font-size:14.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>MAPE:</span></b><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'> El modelo ARIMA ha
+obtenido un MAPE menor de <b>15.975%</b> frente al <b>18.7%</b> del modelo ETS.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:142.2pt;text-align:justify;
+text-indent:-18.0pt'><span style='font-size:14.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span style='font-size:14.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>MSE:</span></b><span style='font-size:14.0pt;
+line-height:107%;font-family:"Times New Roman",serif'> De nuevo, el modelo
+ARIMA ha obtenido un MSE de <b>16226</b> frente a <b>17825</b> del modelo ETS.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:142.2pt;text-align:justify'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:142.2pt;text-align:justify'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>Podemos
+afirmar que el modelo AutoARIMA ha sido más preciso en sus predicciones y por
+lo tanto más fiable en este caso.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:142.2pt;text-align:justify'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:142.2pt;text-align:justify'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:71.25pt;text-align:justify;
+text-indent:-18.0pt'><a name=VentasAcumuladas><span style='font-size:14.0pt;
+line-height:107%;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span style='font-size:14.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>Ventas Acumuladas:</span></b></a></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:106.2pt;text-align:justify'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>El
+gráfico muestra las predicciones mediante los dos modelos de este trabajo y también
+las proporcionadas por Barclays.</span></p>
+
+<p class=MsoNormal style='margin-left:70.8pt;text-indent:35.4pt'><img border=0
+width=517 height=123 id="Imagen 24"
+src="Informe_HW01_SeriesTemporales_archivos/image021.png"
+alt="Tabla&#10;&#10;Descripción generada automáticamente"></p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:35.4pt'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:71.25pt;text-indent:-18.0pt'><a
+name=Barclays><span style='font-size:18.0pt;line-height:107%;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><b><span
+style='font-size:16.0pt;line-height:107%;font-family:"Times New Roman",serif'>Predicciones
+de Barclays:</span></b></a></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:106.2pt'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>Como
+podemos observar en la tabla recién mostrada, las predicciones de ingresos de
+Apple por parte de Barclays van relativamente acorde a los modelos que hemos
+estimado para el año 2021.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:106.2pt'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>Sin
+embargo, en el año 2022 nuestros modelos realizan una predicción ajustada al
+alza mientras que Barclays es más conservador con su predicción.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:106.2pt'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:106.2pt'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>Esto
+se puede deber, entre otras muchas cosas, a la ausencia de variables categóricas
+externas en nuestro modelo ya que al fin y al cabo solo hemos tenido en cuenta
+una evolución numérica y no todas las variables y factores humanos que rodean a
+una empresa como Apple.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:106.2pt'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:106.2pt'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>Por
+otro lado, creo que es conveniente mencionar que el dataset utilizado puede ser
+en cierta manera contraproducente a la hora de realizar una predicción con un
+horizonte temporal de un año y medio como es el caso. Apple es una empresa tecnológica
+que ha tenido un crecimiento exponencial e incesante desde su fundación, con aumentos
+interanuales a nivel de ingresos que posiblemente generen una tendencia a hacer
+que nuestro modelo sobreestime los ingresos en futuros, devolviendo así
+predicciones extremadamente positivas.</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:106.2pt'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>Por
+estas razones y por los niveles de error obtenidos por nuestro modelo, que son
+significantemente altos,  decido decantarme por las predicciones de Barclays y
+las doy como buenas (sin tener un conocimiento de causa real)</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;line-height:107%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
